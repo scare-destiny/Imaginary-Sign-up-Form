@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--left-section-width: min(50vw, 100vw - 2rem);
+}
+
 body {
 	margin: 0;
 }
@@ -13,11 +17,11 @@ body {
 
 
 .container-left {
-	width: min(80ch, 100vw - 2rem);
+	width: var(--left-section-width)
 }
 
 .container-right {
-	width: 60vw;
+	width: calc(100vw - (var(--left-section-width)));
 }
 
 .form-image {
